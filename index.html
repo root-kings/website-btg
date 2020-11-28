@@ -25,30 +25,69 @@
           </a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="https://materializecss.com">Materialize</a></li>
-            <li><a href="https://root-kings.github.io/make">Make</a></li>
-            <li><a href="https://github.com/zeit/serve">Serve</a></li>
-            <li><a href="https://root-kings.github.io">Root Kings</a></li>
+            <li>
+              <a href="https://root-kings.github.io/make">Make</a>
+            </li>
+            <li>
+              <a href="https://github.com/zeit/serve">Serve</a>
+            </li>
+            <li>
+              <a href="https://root-kings.github.io">Root Kings</a>
+            </li>
           </ul>
         </div>
       </nav>
       <ul class="sidenav" id="mobile-nav">
-        <li><a href="https://materializecss.com">Materialize</a></li>
-        <li><a href="https://root-kings.github.io/make">Make</a></li>
-        <li><a href="https://github.com/zeit/serve">Serve</a></li>
-        <li><a href="https://root-kings.github.io">Root Kings</a></li>
+        <li>
+          <a href="https://materializecss.com">Materialize</a>
+        </li>
+        <li>
+          <a href="https://root-kings.github.io/make">Make</a>
+        </li>
+        <li>
+          <a href="https://github.com/zeit/serve">Serve</a>
+        </li>
+        <li>
+          <a href="https://root-kings.github.io">Root Kings</a>
+        </li>
       </ul>
     </header>
     <main>
-      <div class="parallax-container valign-wrapper" style="height: 650px">
+      <!-- <div class="parallax-container valign-wrapper" style="height: 650px">
         <div class="parallax">
           <img class="dark" src="images/office.jpg" />
         </div>
         <div class="full-width">
           <h1 class="white-text center">Heelo</h1>
         </div>
+			</div> -->
+      <div class="carousel carousel-slider" style="height: 500px">
+        <a class="carousel-item" href="#one!" style="position: absolute">
+          <img
+            src="https://picsum.photos/seed/11/1200/500/"
+            style="position: absolute"
+          />
+          <h2 style="position: absolute">First Panel</h2>
+        </a>
+        <a class="carousel-item" href="#two!">
+					<img src="https://picsum.photos/seed/21/1200/500/" />
+					<h2 style="position: absolute">Second Panel</h2>
+        </a>
+        <a class="carousel-item" href="#three!">
+          <img src="https://picsum.photos/seed/31/1200/500/" />
+        </a>
+        <a class="carousel-item" href="#four!">
+          <img src="https://picsum.photos/seed/41/1200/500/" />
+        </a>
+        <a class="carousel-item" href="#five!">
+          <img src="https://picsum.photos/seed/51/1200/500/" />
+        </a>
       </div>
 
-      <div style="height: 150; overflow: hidden; margin-top: -200px" class="wave-container">
+      <div
+        style="height: 100; overflow: hidden; margin-top: -100px"
+        class="wave-container"
+      >
         <!-- <svg
           viewBox="0 0 500 150"
           preserveAspectRatio="none"
@@ -57,14 +96,15 @@
           <path
             d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
             style="stroke: none; fill: #ffffff"
-          ></path>
+					>
+				</path>
         </svg> -->
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none"
-          style="height: 200px; width: 100%"
+          style="height: 100px; width: 100%"
         >
           <path
             fill="#ffffff"
@@ -131,7 +171,9 @@
       </section>
 
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-				<path fill="#0099ff" fill-opacity="1" d="M0,224L40,240C80,256,160,288,240,266.7C320,245,400,171,480,165.3C560,160,640,224,720,245.3C800,267,880,245,960,208C1040,171,1120,117,1200,96C1280,75,1360,85,1400,90.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+				<path fill="#0099ff" fill-opacity="1" d="M0,224L40,240C80,256,160,288,240,266.7C320,245,400,171,480,165.3C560,160,640,224,720,245.3C800,267,880,245,960,208C1040,171,1120,117,1200,96C1280,75,1360,85,1400,90.7L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+					
+				</path>
 			</svg> -->
       <!-- <div style="height: 150px; overflow: hidden">
         <svg
@@ -142,7 +184,8 @@
           <path
             d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
             style="stroke: none; fill: #08f"
-          ></path>
+					>
+				</path>
         </svg>
       </div> -->
 
@@ -212,5 +255,19 @@
 
     <script src="/js/lib/materialize.min.js"></script>
     <script src="/js/init.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elem = document.querySelectorAll('.carousel')[0]
+        var instance = M.Carousel.init(elem, {
+          duration: 300,
+          fullWidth: true,
+        })
+
+        setInterval(() => {
+          instance.next()
+        }, 3000)
+      })
+    </script>
   </body>
 </html>
