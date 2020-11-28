@@ -7,7 +7,7 @@ a.breadcrumb::before {
   color: currentColor;
 }
 
-nav,
+.navbar-fixed, nav,
 nav .nav-wrapper i,
 nav a.sidenav-trigger,
 nav a.sidenav-trigger i {
